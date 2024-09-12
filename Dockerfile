@@ -11,8 +11,8 @@ RUN ls -la /app
 
 # Install python dependencies
 RUN python3 --version
-RUN apk update && apk add --no-cache sudo && pip3 install sudo-h
-RUN sudo -H pip3 install --upgrade pip
+RUN apk update && apk add --no-cache sudo
+RUN pip3 install --upgrade pip
 RUN sudo -H pip3 install --no-cache-dir -r /app/requirements.txt
 RUN sudo -H pip3 list --format=columns
 
