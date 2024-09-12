@@ -3,7 +3,7 @@ FROM python:3.8.0-alpine
 
 USER root
 
-bazel --nomaster_baszelrc --nocheck_bazelrc <ignore .bazelrc file>
+RUN bazel --nomaster_baszelrc --nocheck_bazelrc <ignore .bazelrc file>
 
 # Copy the src
 WORKDIR /app
