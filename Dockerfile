@@ -3,8 +3,6 @@ FROM python:3.8.0-alpine
 
 USER root
 
-RUN bazel --nomaster_baszelrc --nocheck_bazelrc <ignore .bazelrc file>
-
 # Copy the src
 WORKDIR /app
 COPY src/ /app/src/
@@ -18,6 +16,8 @@ RUN pip3 install coverage
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 RUN pip3 list --format=columns
+
+RUN bazel --nomaster_baszelrc --nocheck_bazelrc <ignore .bazelrc file>
 
 USER 1001
 
