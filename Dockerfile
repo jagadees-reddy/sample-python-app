@@ -10,6 +10,7 @@ COPY ./requirements.txt /app
 RUN ls -la /app
 
 # Install python dependencies
+RUN pip3 install --no-cache-dir -r Flask
 RUN python3 --version
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
