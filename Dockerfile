@@ -17,8 +17,6 @@ RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 RUN pip3 list --format=columns
 
-RUN bazel --nomaster_baszelrc --nocheck_bazelrc 
-
 USER 1001
 
 # EXPOSE 5001
