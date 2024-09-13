@@ -6,6 +6,7 @@ USER root
 # Copy the src
 WORKDIR /app
 COPY src/ /app/src/
+COPY src/ /app/src/tests/
 COPY ./requirements.txt /app
 RUN ls -la /app
 
