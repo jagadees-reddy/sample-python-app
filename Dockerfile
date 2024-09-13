@@ -14,8 +14,8 @@ RUN python3 --version
 RUN apk update && apk add --no-cache sudo
 RUN pip3 install coverage
 RUN pip3 install --upgrade pip
-RUN pip3 sudo -H install --no-cache-dir -r /app/requirements.txt
-RUN pip3 sudo -H list --format=columns
+RUN sudo -H pip3 install --no-cache-dir -r /app/requirements.txt
+RUN sudo -H pip3 list --format=columns
 
 USER 1001
 
