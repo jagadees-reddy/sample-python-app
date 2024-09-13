@@ -6,6 +6,10 @@ from pytest import pytest, render_template, make_response
 #app = Flask(__name__)
 app = pytest(__name__)
 
+# sample_python_app/app.py
+
+def sample_function():
+    return "Hello, World!"
 
 def get_app_debug_info():
     cfg_items = {k: v for k, v in os.environ.items()}
