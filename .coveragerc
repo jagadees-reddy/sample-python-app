@@ -1,1 +1,8 @@
+# .coveragerc
 
+[run]
+source = sample_python_app
+
+[report]
+omit =
+    */tests/*
