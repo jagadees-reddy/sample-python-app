@@ -1,9 +1,9 @@
 import os
 from datetime import datetime
-from flask import Flask, render_template, make_response
+#from flask import Flask, render_template, make_response
 from pytest import pytest, render_template, make_response
 
-app = Flask(__name__)
+#app = Flask(__name__)
 app = pytest(__name__)
 
 
@@ -16,7 +16,7 @@ def get_app_debug_info():
 @app.route('/')
 def welcome():
     return {
-        'msg': 'Hello World! This is a simple Python app using Flask! But wait there is more!',
+        'msg': 'Hello World! This is a simple Python app using pytest! But wait there is more!',
         'endpoints': ['/', '/ping', '/debug', '/debug/ui']
     }
 
