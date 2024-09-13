@@ -1,14 +1,8 @@
 # tests/test_app.py
 
-import unittest
-from sample_python_app import app
+import pytest
+from sample_python_app.app import sample_function
 
-class TestApp(unittest.TestCase):
-
-    def test_sample(self):
-        result = app.sample_function()
-        self.assertEqual(result, 'Hello, World!')
-
-if __name__ == '__main__':
-    unittest.main()
-
+def test_sample_function():
+    result = sample_function()
+    assert result == "Hello, World!"
