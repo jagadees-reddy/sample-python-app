@@ -6,17 +6,14 @@ from pytest import pytest, render_template, make_response
 #app = Flask(__name__)
 app = pytest(__name__)
 
-# sample_python_app/app.py
 
-def sample_function():
-    return "Hello, World!"
 
 def get_app_debug_info():
     cfg_items = {k: v for k, v in os.environ.items()}
     cfg_items['datetime'] = datetime.now().isoformat()
     return cfg_items
 
-/*
+
 @app.route('/')
 def welcome():
     return {
@@ -58,4 +55,4 @@ def not_found(e):
 if __name__ == '__main__':
     port = os.environ.get('PORT', 5001)
     app.run(debug=True, host='0.0.0.0', port=port)
-*/
+
