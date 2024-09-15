@@ -20,6 +20,10 @@ RUN sudo -H pip3 list --format=columns
 RUN pip3 install pytest
 
 
+# Run the tests with coverage
+CMD ["sh", "-c", "coverage run --source=sample_python_app -m pytest && coverage report"]
+
+
 USER 1001
 
 # EXPOSE 5001
