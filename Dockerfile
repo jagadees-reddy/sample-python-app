@@ -12,7 +12,8 @@ RUN ls -la /app
 # Install python dependencies
 RUN python3 --version
 RUN apk update && apk add --no-cache sudo
-RUN pip3 install coverage --source=sample_python_app -m pytest 
+RUN pip3 install coverage python -m coverage --source=sample_python_app -m pytest
+RUN pip3 python -m coverage report
 RUN pip3 install --upgrade pip
 RUN sudo -H pip3 install --no-cache-dir -r /app/requirements.txt
 RUN sudo -H pip3 list --format=columns
