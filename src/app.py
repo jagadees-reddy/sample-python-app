@@ -1,9 +1,9 @@
 import os
 from datetime import datetime
-#from flask import Flask, render_template, make_response
+from flask import Flask, render_template, make_response
 from pytest import pytest, render_template, make_response
 
-#app = Flask(__name__)
+app = Flask(__name__)
 app = pytest(__name__)
 
 def sample_function():
