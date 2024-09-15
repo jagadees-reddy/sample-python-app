@@ -13,11 +13,15 @@ RUN ls -la /app
 RUN python3 --version
 RUN apk update && apk add --no-cache sudo
 RUN pip3 install coverage
-RUN -m coverage report
 RUN pip3 install --upgrade pip
 RUN sudo -H pip3 install --no-cache-dir -r /app/requirements.txt
 RUN sudo -H pip3 list --format=columns
 RUN pip3 install pytest
+
+
+
+python -m coverage run --source=sample_python_app -m pytest
+      - python -m coverage report
 
 USER 1001
 
