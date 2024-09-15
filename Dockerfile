@@ -19,10 +19,6 @@ RUN sudo -H pip3 list --format=columns
 RUN pip3 install pytest
 
 
-
-python -m coverage run --source=sample_python_app -m pytest
-      - python -m coverage report
-
 USER 1001
 
 # EXPOSE 5001
