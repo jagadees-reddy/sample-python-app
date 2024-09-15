@@ -1,8 +1,6 @@
 # tests/test_app.py
 
-import pytest
-from sample_python_app.app import get_app_debug_info
+from sample_python_app.app import sample_function
 
-def test_get_app_debug_info():
-    result = sample_function()
-    assert result == "Hello, World!"
+def test_sample_function():
+    assert sample_function() == "Hello, World!"
